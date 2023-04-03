@@ -4,6 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
+       sh "pwd"
        app = docker.build("papamedo/kiii-jenkins")
     }
     stage('Push image') {   
